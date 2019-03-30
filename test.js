@@ -22,3 +22,8 @@ for (var i = 0; i < highlightArray.length; i++) {
 
 
 document.querySelector('h1').style.fontFamily = 'monospace';
+
+
+for (var i = 0; i < 10; i++) {
+  varNode.parentElement.appendChild(dupNode);
+}

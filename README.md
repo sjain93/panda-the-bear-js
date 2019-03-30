@@ -60,3 +60,75 @@ parentObjects = document.querySelector('body > aside > ul ');
 parentObjects.removeChild(childObjects[0]);
 parentObjects.removeChild(childObjects[1]);
 parentObjects.removeChild(childObjects[2]);
+
+-----------------------------------------------------------------------------------------------------------------------
+Part 2
+-----------------------------------------------------------------------------------------------------------------------
+#1
+var elem = document.querySelector('#time-travel');
+var elemP = elem.parentElement;
+elemP.parentNode.removeChild(elemP);
+
+#2
+const varNode = document.querySelector("#right-image > img");
+var dupNode = varNode.cloneNode();
+varNode.parentNode.appendChild(dupNode);
+
+#3
+for (var j = 0; j < 10; j++) {
+	insPika = varNode.cloneNode(true)
+  	varNode.insertAdjacentElement('afterend', insPika);
+};
+
+#4
+
+const listItem = document.createElement('li');
+undefined
+listItem
+<li>​</li>​
+const leftSpan = document.createElement('span');
+undefined
+leftSpan
+<span>​</span>​
+var lastUpdated = document.createTextNode('Page last updated on');
+undefined
+leftSpan.appendChild(lastUpdated);
+"Page last updated on"
+leftSpan
+<span>​Page last updated on​</span>​
+listItem.appendChild(leftSpan);
+<span>​Page last updated on​</span>​
+const rightSpan = document.createElement('span');
+undefined
+var d = new Date();
+undefined
+d
+Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)
+var lastUpdated = document.createTextNod(d);
+VM3185:1 Uncaught TypeError: document.createTextNod is not a function
+    at <anonymous>:1:28
+(anonymous) @ VM3185:1
+var lastUpdated = document.createTextNode(d);
+undefined
+lastUpdated
+"Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)"
+listItem
+<li>​<span>​Page last updated on​</span>​</li>​
+lastUpdated
+"Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)"
+rightSpan.appendChild(lastUpdated);
+"Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)"
+listItem.appendChild(rightSpan);
+<span>​Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)​</span>​
+listItem
+<li>​<span>​Page last updated on​</span>​<span>​Sat Mar 30 2019 18:21:03 GMT-0400 (Eastern Daylight Time)​</span>​</li>​
+let ulAdd = document.querySelector('.bio-info');
+undefined
+ulAdd
+<ul class=​"bio-info">​…​</ul>​
+ulAdd.appendChild(listItem);
+<li>​…​</li>​
+leftSpan.className = "bio-info-title";
+"bio-info-title"
+rightSpan.className = "bio-info-value bio-info-location";
+"bio-info-value bio-info-location"
